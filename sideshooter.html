@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+	<title>Simple Side Shooter</title>
+    <link rel="stylesheet" type="text/css" href="sideshooter.css">
+</head>
+<body>
+	<h1>Example Game</h1>
+	<div id="centerit">
+        <div id="gameWrapper">
+            <div id="screen">
+                <canvas id="canvas" width="800" height="480"></canvas>
+            </div>
+            <p id="drawfps">&nbsp;</p>
+            <p id="updatefps">&nbsp;</p>
+            <button id="fullscreen" onclick="fullScreenHandler.FullScreenToggle();">Play in FullScreen</button>
+        </div>
+    </div>
+	<input id="focus" type="text" style="position:fixed; width:0px;height:0px;display:none;" />
+	<p>As you can see you can now play a game in page or switch to fullscreen</p>
+	<p>Works in
+		<ul>
+			<li>Chrome</li>
+			<li>Firefox</li>
+		</ul>
+	</p>
+</body>
+<script src="scripts/fullscreen.js" ></script>
+<script>
+var fullScreenHandler = new QBGE.Helpers.FullScreen("canvas");
+</script>
+</html>
