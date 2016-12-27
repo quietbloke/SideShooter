@@ -32,7 +32,7 @@ Canvas
 
 #gameWrapper
 {
-	display: inline-block;
+	display: table;
 	margin: auto;
 	padding:10px;
 	border-radius: 10px;
@@ -42,9 +42,10 @@ Canvas
 
 #buttonWrapper
 {
-	display: inline-block;
+	display: table;
 	margin: auto;
 	padding:10px;
+    clear:both;
 }
 
 #buttonWrapper button
@@ -58,7 +59,6 @@ Canvas
 
 #buttonWrapper p
 {
-    color: black;
     width:50px;
 	padding:0px;
 	margin:0px;
@@ -72,12 +72,10 @@ Canvas
 #updatefps
 {
 	float:right;
-	color:#ffffff;
 	display:inline;
 }
 #drawfps
 {
 	float:left;
-	color:#ffffff;
 	display:inline;
 }
