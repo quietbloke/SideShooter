@@ -10,11 +10,10 @@ h1
 
 Canvas
 {
-/*	position:relative; */
     position: relative;
-	top: 50%;
-	transform: 			translateY(-50%);
-	border:1px solid green;
+	top:50%;
+	transform:translateY(-50%);
+	border:none;
 	margin:auto;
 }
 
@@ -23,7 +22,7 @@ Canvas
 	width:480px;
 	height:360px;
 	margin:auto;
-	background-color: #a00000;
+	background-color: #202020;
 }
 
 #screen:-webkit-full-screen {
@@ -37,14 +36,30 @@ Canvas
 	margin: auto;
 	padding:10px;
 	border-radius: 10px;
-    border:1px solid-white;
+    border:none;
 	background-color: #202020;
 }
 
-#gameWrapper button
+#buttonWrapper
 {
-	width:100%;
+	display: inline-block;
+	margin: auto;
+	padding:10px;
+}
+
+#buttonWrapper button
+{
+	width:200px;
 	border:none;
+	padding:0px;
+	margin:0px;
+	margin-top:5px;
+}
+
+#buttonWrapper p
+{
+    color: black;
+    width:50px;
 	padding:0px;
 	margin:0px;
 	margin-top:5px;

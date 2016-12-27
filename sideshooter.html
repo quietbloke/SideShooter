@@ -9,8 +9,10 @@
 	<div id="centerit">
         <div id="gameWrapper">
             <div id="screen">
-                <canvas id="canvas" width="800" height="480"></canvas>
+                <canvas id="canvas" width="640" height="480"></canvas>
             </div>
+        </div>
+        <div id="buttonWrapper">
             <p id="drawfps">&nbsp;</p>
             <p id="updatefps">&nbsp;</p>
             <button id="fullscreen" onclick="fullScreenHandler.FullScreenToggle();">Play in FullScreen</button>
@@ -22,11 +24,29 @@
 		<ul>
 			<li>Chrome</li>
 			<li>Firefox</li>
+            <li>Edge - does not quite play ball but good effort</li>
 		</ul>
 	</p>
 </body>
 <script src="scripts/fullscreen.js" ></script>
 <script>
 var fullScreenHandler = new QBGE.Helpers.FullScreen("canvas");
+
+function init()
+{
+    var canvas = document.getElementById("canvas");
+    if ( canvas.getContext )
+    {
+        // for now just draw a white border round the edge of the canvas
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = "#f0f0f0";
+        ctx.fillRect(0,0,ctx.canvas.width,ctx.canvas.height);
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(1,1,ctx.canvas.width-2,ctx.canvas.height-2);
+    }
+}
+
+init();
 </script>
 </html>
