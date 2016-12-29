@@ -1,0 +1,13 @@
+{
+    "compileOnSave":true,
+   "compilerOptions": {
+        "target": "ES6",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir": "./helpers",
+        "outFile":"../helpers.js",
+        "sourceRoot"    : "./helpers",
+        "rootDir": "./",
+        "sourceMap": true
+    }
+}

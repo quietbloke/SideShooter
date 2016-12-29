@@ -139,7 +139,7 @@ namespace QBGE.Helpers
                 var screenHeight:number = window.innerHeight;
                 var screenWidth:number = window.innerWidth;
 
-console.log("screen size " + screenWidth + " / " + screenHeight);
+    console.log("screen size " + screenWidth + " / " + screenHeight);
 
                 this.parentElement.style.width = "" + screenWidth;
                 this.parentElement.style.height = "" + screenHeight;
