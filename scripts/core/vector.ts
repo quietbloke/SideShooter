@@ -1,4 +1,4 @@
-namespace QBGE
+namespace QBGE.Core
 {
     export class Vector
     {

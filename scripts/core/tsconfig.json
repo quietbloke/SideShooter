@@ -4,9 +4,9 @@
         "target": "ES6",
         "removeComments": true,
         "preserveConstEnums": true,
-        "outDir": "./helpers",
-        "outFile": "../helpers.js",
-//        "sourceRoot": "./helpers",
+        "outDir": "./core",
+        "outFile": "../core.js",
+//        "sourceRoot": "./core",
         "rootDir": "./",
         "sourceMap": false
     }
