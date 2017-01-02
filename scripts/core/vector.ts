@@ -5,23 +5,44 @@ namespace QBGE.Core
         public x:number
         public y:number 
 
-        constructor ( public xIn:number, public yIn:number)
+        constructor ( x:number, y:number)
         {
-            this.x = xIn;
-            this.y = yIn;
+            this.x = x;
+            this.y = y;
         }
 
         public Add(v1: Vector):Vector
         {
-            return new Vector(this.x + v1.x,this.y + v1.y);
+            this.x += v1.x;
+            this.y += v1.y;
+            return this;
         }
 
         public Subtract(v1: Vector):Vector
         {
-            return new Vector(this.x - v1.x,this.y - v1.y);
+            this.x -= v1.x;
+            this.y -= v1.y;
+            return this;
         }
 
         public Multiply(v1: Vector):Vector
+        {
+            this.x *= v1.x;
+            this.y *= v1.y;
+            return this;
+        }
+
+        public AddNew(v1: Vector):Vector
+        {
+            return new Vector(this.x + v1.x,this.y + v1.y);
+        }
+
+        public SubtractNew(v1: Vector):Vector
+        {
+            return new Vector(this.x - v1.x,this.y - v1.y);
+        }
+
+        public MultiplyNew(v1: Vector):Vector
         {
             return new Vector(this.x * v1.x,this.y * v1.y);
         }

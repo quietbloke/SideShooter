@@ -136,8 +136,8 @@ namespace QBGE.Helpers
         {
             if ( this.isFullScreen())
             {
-                var screenHeight:number = window.innerHeight;
-                var screenWidth:number = window.innerWidth;
+                var screenHeight:number = screen.height; //window.innerHeight;
+                var screenWidth:number = screen.width; //window.innerWidth;
 
     console.log("screen size " + screenWidth + " / " + screenHeight);
 
