@@ -29,7 +29,7 @@ namespace QBGE.Helpers
 
     export class FullScreen
     {
-        private element:BetterHTMLElement;
+        private element:HTMLCanvasElement;
         private parentElement:BetterHTMLElement;
         private canSwitch:boolean = false;
 
@@ -38,7 +38,7 @@ namespace QBGE.Helpers
 
         constructor(elementId:string)
         {
-            this.element = <BetterHTMLElement>document.getElementById(elementId);
+            this.element = <HTMLCanvasElement>document.getElementById(elementId);
             this.parentElement = <BetterHTMLElement>this.element.parentElement;
 
             if ( this.parentElement )
@@ -55,6 +55,11 @@ namespace QBGE.Helpers
 
                 this.doResize();
             }
+        }
+
+        public Init()
+        {
+            this.doResize();
         }
 
         private BrowserSupportsFullscreen():boolean
@@ -139,20 +144,20 @@ namespace QBGE.Helpers
                 var screenHeight:number = screen.height; //window.innerHeight;
                 var screenWidth:number = screen.width; //window.innerWidth;
 
-    console.log("screen size " + screenWidth + " / " + screenHeight);
+//    console.log("screen size " + screenWidth + " / " + screenHeight);
 
                 this.parentElement.style.width = "" + screenWidth;
                 this.parentElement.style.height = "" + screenHeight;
 
-                var ratioX:number = this.element.offsetWidth / screenWidth;
-                var ratioY:number = this.element.offsetHeight / screenHeight;
+                var ratioX:number = this.element.width / screenWidth;
+                var ratioY:number = this.element.height / screenHeight;
 
                 var ratio = ratioX
                 if ( ratioX < ratioY )
                     ratio = ratioY;
                     
-                var w:number = this.element.offsetWidth / ratio;
-                var h:number = this.element.offsetHeight / ratio;
+                var w:number = this.element.width / ratio;
+                var h:number = this.element.height / ratio;
 
                 this.element.style.height = h+"px";
                 this.element.style.width = w+"px";
